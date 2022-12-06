@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+
+body{
+   background-color: white !important;
+   overflow-x: auto;
+   font-family: 'Titillium Web', sans-serif !important;
+}
+.offset:before{
+   display: block;
+   content: "";
+   height: 4rem !important;
+   margin-top: 0rem !important;
+}
+
+
+/*--- Fix for Fixed Navbar jumping on scroll --*/
+.fixed-top{
+   -webkit-backface-visibility: hidden;
+   position: fixed;
+}
+
+/* Navbar Section */
+.navbar{
+   height: 80px;
+   padding: 20px 13px;
+}
+.navbar-brand{
+   color: whitesmoke !important;
+   font-size: 27px !important;
+   font-style: italic;
+}
+.brand-logo{
+   width: 35px;
+}
+.brand-name{
+   margin-left: 12px;
+}
+.brandAlt-name{
+   display: none;
+}
+.navbar-nav{
+   text-align: right !important;
+   background-color: #0c0c0c;
+}
+.nav-link{
+   color: whitesmoke !important;
+   font-size: 20px !important;
+}
+.navbar-toggler{
+   border-color: rgb(151, 151, 151) !important;
+   border-width: 2px !important;
+}
+.navbar-toggler:focus {
+   box-shadow: none !important;
+}
+.navbar .navbar-toggler[aria-expanded="true"] {
+   color: whitesmoke !important;
+}
+.navbar .navbar-toggler:focus{
+   color: whitesmoke !important;
+}
+
+
+/* Home Section */
+.home-background{
+   width: 100%;
+   height: 100vh;
+   overflow: hidden;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.home-background video{
+   position: absolute;
+   top: 0;
+   left: 0;
+   object-fit: cover;
+   width: 100%;
+   height: 100vh;
+   pointer-events: none;
+}
+
+.home-content{
+   width: 100%;
+   max-width: 100%;
+   position: absolute;
+   top: 28%;
+   left: 30%;
+   z-index: 1;
+   color: whitesmoke;
+   text-align: center;
+}
+
+/* Products Section */
+#products{
+   width: 100%;
+   padding: 50px 45px;
+   overflow-x: hidden;
+}
+.card{
+   width: 24vw;
+   border-radius: 8px !important;
+   box-shadow: 1px 1px 0px 0px rgb(212, 212, 212);
+   margin: 15px auto;
+}
+.card img{
+   width: 100%;
+   border-radius: 8px 8px 0px 0px;
+}
+.card-body{
+   padding: 13px !important;
+}
+.card-body h3{
+   font-size: 30px;
+   font-weight: bold;
+   font-style: italic;
+   font-style: italic;
+}
+.card-body p{
+   font-size: 18px;
+}
+
+/* Our Future Section */
+#our-future{
+   width: 100%;
+   overflow-x: hidden;
+}
+#our-future .bg-dark{
+   background-color: #000000 !important;
+}
+
+#our-future .left-side{
+   width: 100%;
+   margin: 60px auto;
+   padding-left: 50px;
+   text-align: left;
+}
+#our-future h1{
+   color: whitesmoke;
+   font-size: 55px;
+}
+#our-future p{
+   font-size: 22px;
+   color: whitesmoke;
+}
+
+#our-future .right-side{
+   text-align: left;
+   margin: 0 0 !important;
+}
+#our-future .right-side img{
+   width: 1000px;
+}
+
+/* About Us Section */
+#about-us{
+   width: 100%;
+   overflow-x: hidden;
+}
+
+#about-us .right-side{
+   width: 100%;
+   margin: 70px 0px !important;
+   text-align: left;
+   padding-right: 25px;
+}
+#about-us .right-side .row{
+   text-align: center;
+}
+#arrowRight{
+   width: 100% !important;
+   padding: 50px 0px;
+}
+#about-us .right-side .row img{
+   width: 250px;
+}
+#about-us h1{
+   font-size: 65px;
+}
+#about-us p{
+   font-size: 22px;
+}
+
+#about-us .left-side{
+   padding: 30px 0;
+   text-align: center;
+   margin: auto auto !important;
+}
+#about-us .left-side img{
+   width: 550px;
+}
+
+/* Footer Section */
+footer{
+   width: 100%;
+   overflow-x: hidden;
+}
+footer .bg-dark{
+   background-color: #000000 !important;
+}
+footer p{
+   color: whitesmoke;
+   font-size: 18px;
+}
+footer{
+   display: inline;
+}
+footer .row{
+   padding: 10px 0px !important;
+   text-align: center;
+   display: inline;
+}
+footer .row a{
+   font-size: 19px;
+   text-decoration: none;
+   color: whitesmoke;
+}
+footer .fa-brands{
+   margin-right: 2px;
+   transition: all 1s;
+   font-size: 20px;
+}
+footer .fa-brands:hover{
+   transform: rotate(360deg);
+}
+#socket{
+   width: 100%;
+   border-top: .15rem solid !important;
+   border-color: white !important;
+   margin-top: 1.7rem;
+}
+hr {
+   box-sizing: content-box;
+   height: 0;
+   overflow: visible;
+}
+#copyWrite{
+   margin-bottom: 0px !important;
+}
+
+
+/* Media Screens */
+@media (max-width: 1330px) {
+   #about-us .row{
+      display: block;
+   }
+   #about-us .col-md-7{
+      width: 100% !important;
+   }
+   #about-us .col-md-2{
+      width: 100% !important;
+   }
+   #arrowRight{
+      width: 140px !important;
+      rotate: 90deg;
+   }
+   #about-us .col-md-5{
+      width: 100% !important;
+   }
+   #about-us .right-side{
+      padding: 0px 25px !important;
+      margin: 0px 0px 55px 0px !important;
+      text-align: center;
+   }
+   #about-us .right-side p{
+      margin-top: 20px;
+   }
+   #about-us .left-side{
+      padding: 0px 0px 30px 0px !important;
+   }
+}
+@media (max-width: 995px) {
+   .navbar .navbar-collapse{
+      margin-top: 13px;
+   }
+   .nav-item{
+      padding: 10px 15px 10px 15px;
+      text-align: left;
+   }
+}
+@media (max-width: 775px) {
+   .card{
+      width: 50vw;
+   }
+   #our-future .left-side{
+      margin: 75px auto 0px auto !important;
+      padding: 0px 20px 0px 30px;
+   }
+   #our-future .right-side{
+      margin: 0 0;
+   }
+}
+@media (max-width: 600px) {
+   .card{
+      width: 80vw;
+   }
+   #about-us .left-side img{
+      width: 450px;
+   }
+}
+@media (max-width: 480px) {
+   .brand-name{display: none;
+   }
+   .brandAlt-name{
+      margin-left: 12px;
+      display: inline;
+   }
+   #about-us .left-side img{
+      width: 400px;
+   }  
+}
+@media (max-width: 450px) {
+   #our-future h1{
+      color: whitesmoke;
+      font-size: 52px;
+   }
+   #our-future p{
+      font-size: 19px;
+      color: whitesmoke;
+   }
+   #about-us .left-side img{
+      width: 350px;
+   }
+   #about-us .right-side .row img{
+      width: 200px;
+   }
+}
+@media (max-width: 400px) {
+   .card{
+      width: 70vw;
+   }  
+}
+@media (max-width: 405px) {
+   #our-future h1{
+      font-size: 40px;
+   }
+   #our-future p{
+      font-size: 16px;
+   }
+   #about-us .left-side img{
+      width: 290px;
+   }
+   #about-us .right-side h1{
+      font-size: 55px;
+   }
+   #about-us .right-side p{
+      font-size: 18px;
+   }
+}
