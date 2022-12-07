@@ -1,0 +1,33 @@
+:root {
+   --primary-bg: rgba(44,62,80 ,1);
+   --secondary-bg: rgba(0, 0, 0, 0.96);
+   --box-shadow-color-1: gold;
+   --box-shadow-color-2: rgba(149,165,166 ,0.1);
+   --box-shadow-color-3: #ecf0f1;
+   --phone-width: 350px;
+   --phone-height: 700px;
+}
+
+/* Note to Francois: The link from the assignment*/
+/* to the photo (https://lh4.googleusercontent.com/RuZv...etc) was giving me a 403 error,*/
+/* so I had to use another picture ;) */
+
+body{
+   background-color: var(--secondary-bg);
+}
+
+.home-section{
+   width: 100%;
+}
+.container{
+   width: fit-content;
+   padding: 15px 15px;
+   border-radius: 15px;
+   margin: 20px auto;
+   background-color: var(--box-shadow-color-2);
+   text-align: center;
+}
+.container img{
+   width: var(--phone-width);
+   height: var(--phone-height);
+}
