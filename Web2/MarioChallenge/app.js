@@ -33,7 +33,7 @@ const init = () => {
         }
 
         if(isTouching(avatar,coin)) {
-            score = score + 1
+            score++
             scoreDisplay.textContent = score
             moveCoin()
         };
