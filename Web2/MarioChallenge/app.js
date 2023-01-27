@@ -44,14 +44,43 @@ const moveVertical = (element, amount) => {
     const stepsAudio = document.querySelector('#stepsAudio')
     stepsAudio.play()
     const currTop = extractPos(element.style.top);
-    element.style.top = `${currTop + amount}px`;
+    if (currTop >= (window.innerHeight/1.24)){
+        if (Math.sign(amount) === -1){
+            element.style.top = `${currTop + amount}px`;
+        } else{
+            element.style.top = element.style.top
+        }
+    }else if (currTop <= 0){
+        if (Math.sign(amount) === 1){
+            element.style.top = `${currTop + amount}px`;
+        } else{
+            element.style.top = element.style.top
+        }
+    } else {
+        element.style.top = `${currTop + amount}px`;
+    }
 }
 
 const moveHorizontal = (element, amount) => {
     const stepsAudio = document.querySelector('#stepsAudio')
     stepsAudio.play()
     const currLeft = extractPos(element.style.left);
-    element.style.left = `${currLeft + amount}px`;
+
+    if (currLeft >= (window.innerWidth/1.1)){
+        if (Math.sign(amount) === -1){
+            element.style.left = `${currLeft + amount}px`;
+        } else{
+            element.style.left = element.style.left
+        }
+    }else if (currLeft <= 0){
+        if (Math.sign(amount) === 1){
+            element.style.left = `${currLeft + amount}px`;
+        } else{
+            element.style.left = element.style.left
+        }
+    } else {
+        element.style.left = `${currLeft + amount}px`;
+    }
 }
 
 const extractPos = (position) => {
