@@ -13,32 +13,92 @@ $(document).ready(function () {
     const inputBox = $('#inputBox')
 
     // Get the list
-    const list = $('#list')
+    const list = $('.list')
 
-
-
-    // event listener for add button
+    // Input Box: AddTask Icon press
     $('#addTask').click(function(){
         if(inputBox.val() !== ''){
             let new_li = document.createElement('li')
-            new_li.textContent = inputBox.val()
 
-            list.append(new_li)
-            inputBox.val('')
+                let textSpan = document.createElement('span')
+                textSpan.classList.add('textSpan')
+
+
+                let iconSpan = document.createElement('span')
+                iconSpan.classList.add('iconSpan')
+                
+
+                // 1st Icon
+                let icon_1 = document.createElement('i')
+                icon_1.setAttribute("id", 'checkBtn')
+                icon_1.classList.add('fa-solid fa-check')
+                icon_1.classList.add('fa-check')
+                icon_1.classList.add('todoIcons')
+                icon_1.classList.add('firstIcon')
+
+                // 2nd Icon
+                let icon_2 = document.createElement('i')
+                icon_2.setAttribute("id", 'deleteBtn')
+                icon_2.classList.add('fa-solid')
+                icon_2.classList.add('fa-trash')
+                icon_2.classList.add('todoIcons')
+                
+
+                let new_p = document.createElement('p')
+                new_p.innerText = inputBox.val()
+                textSpan.appendChild(new_p)
+
+                iconSpan.appendChild(icon_1)
+                iconSpan.appendChild(icon_2)
+                new_li.appendChild(textSpan)
+                new_li.appendChild(iconSpan)
+                $(new_li).hide().appendTo(list).fadeIn(700)
+                inputBox.val('')
         }
         else{
             alert('The textbox cannot be empty 😖')
         }
     })
 
-    // event listener for enter key press inside of inputBox
+    // Input Box: Key press
     $('#inputBox').on('keypress', function(e){
         if(e.which == 13){
             if(inputBox.val() !== ''){
                 let new_li = document.createElement('li')
-                new_li.textContent = inputBox.val()
 
-                list.append(new_li)
+                let textSpan = document.createElement('span')
+                textSpan.classList.add('textSpan')
+
+
+                let iconSpan = document.createElement('span')
+                iconSpan.classList.add('iconSpan')
+                
+
+                // 1st Icon
+                let icon_1 = document.createElement('i')
+                icon_1.setAttribute("id", 'checkBtn')
+                icon_1.classList.add('fa-solid')
+                icon_1.classList.add('fa-check')
+                icon_1.classList.add('todoIcons')
+                icon_1.classList.add('firstIcon')
+
+                // 2nd Icon
+                let icon_2 = document.createElement('i')
+                icon_2.setAttribute("id", 'deleteBtn')
+                icon_2.classList.add('fa-solid')
+                icon_2.classList.add('fa-trash')
+                icon_2.classList.add('todoIcons')
+                
+
+                let new_p = document.createElement('p')
+                new_p.innerText = inputBox.val()
+                textSpan.appendChild(new_p)
+
+                iconSpan.appendChild(icon_1)
+                iconSpan.appendChild(icon_2)
+                new_li.appendChild(textSpan)
+                new_li.appendChild(iconSpan)
+                $(new_li).hide().appendTo(list).fadeIn(700)
                 inputBox.val('')
             }
             else{
@@ -46,4 +106,23 @@ $(document).ready(function () {
             }
         }
     })
+
+    // Icons Event listeners / Check and Delete
+    $(document).on('click', '#checkBtn', function() {
+        const span_target = $(this).parent()
+        const li_target = span_target.parent()
+        li_target.fadeOut('2000', function(){
+            $('.completed').append(li_target)
+            li_target.fadeIn('2000')
+        })
+    })
+
+    $(document).on('click', '#deleteBtn', function() {
+        const span_target = $(this).parent()
+        const li_target = span_target.parent()
+        li_target.fadeOut('2000', function(){
+            this.remove()
+        })
+    })
+    
 });
