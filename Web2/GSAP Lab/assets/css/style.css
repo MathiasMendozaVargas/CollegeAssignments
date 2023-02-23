@@ -1,0 +1,113 @@
+*{
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+.body-secondary{
+    width: 100%;
+}
+
+.wrapper{
+    padding: 0px 120px;
+}
+
+.nav{
+    width: 100%;
+    padding: 30px 0px;
+    display: inline-flex;
+}
+.nav .logo {
+    width: 40%;
+    font-size: 38px;
+    color: black;
+    /* font-family: 'Montserrat', sans-serif; */
+    font-family: 'Poppins', sans-serif;
+    text-align: left;
+    font-weight: 600;
+    margin-left: 30px;
+}
+.nav .menu-links{
+    width: 60%;
+    text-align: right;
+}
+
+.menu-links ul{
+    display: inline-flex;
+}
+.menu-links ul li{
+    margin-left: 20px;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 15px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.menu-links ul li a{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+
+/* Content Section */
+.content{
+    width: 100%;
+    padding: 0px 200px;
+    overflow-y: hidden;
+}
+
+.tagline{
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: rgb(159, 159, 159);
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.title{
+    width: 100%;
+    color: black;
+    font-size: 175px;
+    font-family: 'Poppins', sans-serif;
+    line-height: 150px;
+    overflow-y: hidden;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.desc{
+    width: 30%;
+    text-align: left;
+
+}
+.desc-title{
+    font-size: 28px;
+    color: black;
+    margin-bottom: 20px;
+}
+.desc-title span{
+    color: rgb(131, 197, 31);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+.desc-body{
+    width: 100%;
+    text-align: justify;
+}
+
+.beer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+    width: 500px;
+}
+.beer img {
+    width: 100%;
+}
