@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/919c0a277c.js" crossorigin="anonymous"></script>
+    <title>Add Note</title>
+</head>
+<body>
+    <div class="container">
+         <h1>Add Note</h1>
+        <form action="/new-note" method="POST">
+            <div class="input-wrapper">
+                <input type="text" placeholder="Note title" id="title" name="title" class="input" required>
+            </div>
+
+            <div class="input-wrapper">
+                <input class="input" name="content" placeholder="Note content" id="content" cols="30" rows="10" required></input>
+            </div>
+
+            <button type="submit" class="button"><span class="button_top"> Add note <i class="fa-solid fa-plus"></i></span></button>
+        </form>
+    </div>
+    <br>
+    <button onclick="location.href='http://localhost:3000/'"' type="button">
+        <span class="button_top"><i style="margin-right: 5px;" class="fa-solid fa-arrow-left"></i> Back Home </span>
+    </button>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/919c0a277c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Notes</title>
+</head>
+<body>
+    <h1><i class="fa-solid fa-book-open-reader"></i> All Your Notes <i class="fa-solid fa-book-open-reader"></i></h1>
+    <div class='card_stack'>
+        <script>
+            const jsonData = JSON.parse('<%- JSON.stringify(jsonData) %>');
+            const cardStack = document.querySelector('.card_stack');
+            
+            for (const item of jsonData) {
+                const card = document.createElement('div');
+                card.className = 'card';
+
+                const title = document.createElement('h2');
+                title.textContent = item.title;
+                title.className = 'note-title';
+                card.appendChild(title);
+
+                const p = document.createElement('p');
+                p.className = 'note-content';
+                p.textContent = item.content;
+                card.appendChild(p);
+                cardStack.appendChild(card);
+            }
+        </script>
+    </div>
+    <button onclick="location.href='http://localhost:3000/'"' type="button">
+        <span class="button_top"><i style="margin-right: 5px;" class="fa-solid fa-arrow-left"></i>Go Back</span>
+    </button>
+</body>
+</html>

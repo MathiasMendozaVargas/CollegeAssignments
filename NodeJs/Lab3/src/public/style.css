@@ -1,0 +1,100 @@
+body{
+    background-color:gray;
+    margin: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* HOME */
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    width: 50%;
+    min-width: 400px;
+    height: 90%;
+    border-radius: 30px 0px 30px 0px;
+    background: rgb(167, 76, 2);
+    box-shadow: 15px 15px 30px #bebebe,
+               -15px -15px 30px #ffffff;
+    margin: 40px;
+}
+
+.container h1{
+  color: white;
+  margin-bottom: 20px;
+}
+ 
+button {
+  font-size: 15px;
+  font-weight: bold;
+  border: none;
+  padding: 10px 25px;
+  background-color: black;
+  border-radius: 0px 10px 0px 10px;
+  color: white;
+  margin: 10px;
+}
+button:hover{
+  cursor: pointer;
+  background-color: rgb(43, 43, 43);
+}
+  
+.container span i{
+  margin-left: 5px;
+}
+
+/* Create note */
+form{
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content: space-between;
+  width: 300px;
+  min-width: 300px;
+}
+
+
+.input-wrapper input {
+  background-color: rgb(232, 228, 228);
+  border: none;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  width: 13em;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+  
+.input-wrapper input:focus {
+  outline: none;
+  cursor: default;
+}
+
+/* Read notes */
+.card_stack{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 320px;
+    width: 100%;
+}
+
+.card {
+    padding: 5px 20px;
+    width: 190px;
+    height: 254px;
+    border-radius: 30px 0px 30px 0px;
+    background: rgb(167, 76, 2);
+    color: whitesmoke;
+    box-shadow: 15px 15px 30px #bebebe,
+               -15px -15px 30px #ffffff;
+    margin: 25px;
+  }
